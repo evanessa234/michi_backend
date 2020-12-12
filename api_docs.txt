@@ -1,0 +1,248 @@
+** http://localhost:3000/api/getProfile
+
+    body :
+        {
+            "email": "heena@gmail.com"
+        }
+
+    fetched data :
+
+        {
+            "success": 1,
+            "data": [
+                        {
+                            "uid": 1,
+                            "f_name": "jeena",
+                            "l_name": "singh",
+                            "email": "heena@gmail.com",
+                            "password": "123",
+                            "interests": "[web, AI]",
+                            "profession": null
+                        }
+                    ]
+        }
+
+** http://localhost:3000/api/updatePassion
+    body:
+        {
+            "uid": 2,
+            "interests": "('ai', 'ml')",
+            "profession": "developer" 
+        }
+
+** http://localhost:3000/api/postNewRoadmap
+    body:
+        {
+            {
+                "uid": 2,
+                "title": "roapmap new for 2",
+                "category": "('ml', 'cyb', 'web')",
+                "motivation": "motivation for roadmap 2",
+                "deadline": "2021-04-18 18:30:00"
+            }
+        } 
+
+** http://localhost:3000/api/updateRoadmap
+    body:
+        {
+            "uid": 5,
+            "title": "updated roapmap new for 5",
+            "category": "('ml', 'cyb', 'web', 'robotics')",
+            "motivation": "updated motivation for roadmap 5",
+            "deadline": "2021-01-18 18:30:00"
+        }
+
+** http://localhost:3000/api/postRoadmapCheckpoints
+    body: 
+        {
+            "uid": 5,
+            "checkpoints": [{"rid": 3, "sequence": 1}, {"rid": 2, "sequence": 2}, {"rid": 3, "sequence": 3}, {"rid": 1, "sequence": 4}]
+        }
+
+** http://localhost:3000/api/getRoadmapCheckpoints
+    body:
+        {
+            "uid": 1
+        }
+
+    fetched data:
+        {
+            "success": 1,
+            "data": [
+                        {
+                            "rid": 3,
+                            "type": "course",
+                            "category": "ui/ux",
+                            "title": "Interactive 3D Graphics",
+                            "rlink": "https://www.udacity.com/course/interactive-3d-graphics--cs291",
+                            "eta_in_hrs": 15,
+                            "counter": 1,
+                            "isPublic": 1,
+                            "rmid": 1,
+                            "uid": 1,
+                            "sequence": 1,
+                            "completion_date": "2020-12-12T01:25:00.000Z",
+                            "completion_proof": "https://www.w3schools.com/sql/sql_dates.asp",
+                            "share_linkedin": 0
+                        },
+                        {
+                            "rid": 2,
+                            "type": "book",
+                            "category": "ai",
+                            "title": "artufical intelligence",
+                            "rlink": "https://www.google.com/search?rlz=1C1CHBF_enIN890IN890&sxsrf=ALeKk02ISwzyhMMA4DkXlyMvT3XY6Agd-Q:1607505349031&q=Artificial+Intelligence:+A+Modern+Approach&stick=H4sIAAAAAAAAAGVTO2wTQRD1BfLxOUixI6TIlXEVzMd3e3uxnSYJiCIiUVBIARScfOvb--39V7lPEwkhpUMRUmiRKICCgpoCoXQYiYICOgo6qlCmAWEHey8S1828N3PvzczOTNaLTacpgCD0CZjumjXV8-w-lyf73IWm3hRFvWcHtiFnfa40xETRcmw7GaMoEpY6gpqNKqVOFPTGmCFINt4VAtaJKoolyPY4VmM58bGUsl4tiIniuH2OH_ZydZ_K0RjEMAQRgsEITCkIgt0xU-5ZImBMMcwMGWW5jJRQqg5kzQzJKFakUR1Q0iCI-9zskAegBZ1IbzG1Ku5kmPosBiAJ9IyOapeUViu3irM0iexQH4FQaYFYZr7CTE8tMZ9DErrAjZ1x3EsClLQwM2BIbZK0ociaW1mrbVvhGaEBhMnIjwN0yJiO3IklwCbawwTJKnTGfmVgCW1GFmLi4Pw3ut5xiAiMM7LUJFIZjmTJdkQY5xsJiDC4hVx2i9hCQhlfdJ2enNs2oBJAIqL8sHYNS6dsT8i3cWoEVr43QRBxCvNz8SMUWkusnkgqCCGLMRksHsTZyKxiqHp-eziyiKoiPxfvJw4civ03U9WRoU3sH9zzidLcz5Pv89XDiadvPn7lnkzwcxueF2kk3dZIl2q9Ha9S56duudSkaWWBL1WnT9dgZ4uFapEfBxWTL93V6I636fVMnFYeVO7xxU3NUbUw2sKVZZ6_6RGiIWp6buUqf7FabiKWaA4fYzToN8__n66Xtk_fmkoVJC1PLHJ1Gyjvvjz7PHW_fCMpFPg7m6vVy40KP70ebXioS8q39698ePX4eKUxz8_sdBPP9Zy0XDj9fq3ULxX35z-tHIDjlfLLb3_23j68trpwrlZYLIhbJ7_3jg6vrzYKj96_Ppo6P8PNFWZfTDbWQmpiE5ldUlt3qUaIqWsu0pZra7WBWy10a2u-H3pdZBxMcX8B8Qo9VWoEAAA&sa=X&ved=2ahUKEwixw7aKyMDtAhVazTgGHcMBAekQ-BYwGHoECBEQNA&biw=1242&bih=597",
+                            "eta_in_hrs": 35,
+                            "counter": 3,
+                            "isPublic": 1,
+                            "rmid": 1,
+                            "uid": 1,
+                            "sequence": 2,
+                            "completion_date": null,
+                            "completion_proof": null,
+                            "share_linkedin": 0
+                        },
+                        {
+                            "rid": 3,
+                            "type": "course",
+                            "category": "ui/ux",
+                            "title": "Interactive 3D Graphics",
+                            "rlink": "https://www.udacity.com/course/interactive-3d-graphics--cs291",
+                            "eta_in_hrs": 15,
+                            "counter": 1,
+                            "isPublic": 1,
+                            "rmid": 1,
+                            "uid": 1,
+                            "sequence": 3,
+                            "completion_date": null,
+                            "completion_proof": null,
+                            "share_linkedin": 0
+                        },
+                        {
+                            "rid": 4,
+                            "type": "course",
+                            "category": "web",
+                            "title": "full-stack-foundations",
+                            "rlink": "https://www.udacity.com/course/full-stack-foundations--ud088",
+                            "eta_in_hrs": 12,
+                            "counter": 3,
+                            "isPublic": 1,
+                            "rmid": 1,
+                            "uid": 1,
+                            "sequence": 4,
+                            "completion_date": null,
+                            "completion_proof": null,
+                            "share_linkedin": 0
+                        },
+                        {
+                            "rid": 2,
+                            "type": "book",
+                            "category": "ai",
+                            "title": "artufical intelligence",
+                            "rlink": "https://www.google.com/search?rlz=1C1CHBF_enIN890IN890&sxsrf=ALeKk02ISwzyhMMA4DkXlyMvT3XY6Agd-Q:1607505349031&q=Artificial+Intelligence:+A+Modern+Approach&stick=H4sIAAAAAAAAAGVTO2wTQRD1BfLxOUixI6TIlXEVzMd3e3uxnSYJiCIiUVBIARScfOvb--39V7lPEwkhpUMRUmiRKICCgpoCoXQYiYICOgo6qlCmAWEHey8S1828N3PvzczOTNaLTacpgCD0CZjumjXV8-w-lyf73IWm3hRFvWcHtiFnfa40xETRcmw7GaMoEpY6gpqNKqVOFPTGmCFINt4VAtaJKoolyPY4VmM58bGUsl4tiIniuH2OH_ZydZ_K0RjEMAQRgsEITCkIgt0xU-5ZImBMMcwMGWW5jJRQqg5kzQzJKFakUR1Q0iCI-9zskAegBZ1IbzG1Ku5kmPosBiAJ9IyOapeUViu3irM0iexQH4FQaYFYZr7CTE8tMZ9DErrAjZ1x3EsClLQwM2BIbZK0ociaW1mrbVvhGaEBhMnIjwN0yJiO3IklwCbawwTJKnTGfmVgCW1GFmLi4Pw3ut5xiAiMM7LUJFIZjmTJdkQY5xsJiDC4hVx2i9hCQhlfdJ2enNs2oBJAIqL8sHYNS6dsT8i3cWoEVr43QRBxCvNz8SMUWkusnkgqCCGLMRksHsTZyKxiqHp-eziyiKoiPxfvJw4civ03U9WRoU3sH9zzidLcz5Pv89XDiadvPn7lnkzwcxueF2kk3dZIl2q9Ha9S56duudSkaWWBL1WnT9dgZ4uFapEfBxWTL93V6I636fVMnFYeVO7xxU3NUbUw2sKVZZ6_6RGiIWp6buUqf7FabiKWaA4fYzToN8__n66Xtk_fmkoVJC1PLHJ1Gyjvvjz7PHW_fCMpFPg7m6vVy40KP70ebXioS8q39698ePX4eKUxz8_sdBPP9Zy0XDj9fq3ULxX35z-tHIDjlfLLb3_23j68trpwrlZYLIhbJ7_3jg6vrzYKj96_Ppo6P8PNFWZfTDbWQmpiE5ldUlt3qUaIqWsu0pZra7WBWy10a2u-H3pdZBxMcX8B8Qo9VWoEAAA&sa=X&ved=2ahUKEwixw7aKyMDtAhVazTgGHcMBAekQ-BYwGHoECBEQNA&biw=1242&bih=597",
+                            "eta_in_hrs": 35,
+                            "counter": 3,
+                            "isPublic": 1,
+                            "rmid": 1,
+                            "uid": 1,
+                            "sequence": 5,
+                            "completion_date": null,
+                            "completion_proof": null,
+                            "share_linkedin": 0
+                        }
+                    ]
+        }    
+
+** http://localhost:3000/api/getFeed
+
+    body:
+        {
+            "category": "web"
+        }
+    
+    fetched data:
+        {
+            "success": 1,
+            "data": [
+                        {
+                            "rid": 1,
+                            "type": "course",
+                            "category": "web",
+                            "title": "web course",
+                            "rlink": "https://www.coursera.org/specializations/web-design",
+                            "eta_in_hrs": 5,
+                            "counter": 1,
+                            "isPublic": 1
+                        },
+                        {
+                            "rid": 4,
+                            "type": "course",
+                            "category": "web",
+                            "title": "full-stack-foundations",
+                            "rlink": "https://www.udacity.com/course/full-stack-foundations--ud088",
+                            "eta_in_hrs": 12,
+                            "counter": 3,
+                            "isPublic": 1
+                        },
+                        {
+                            "rid": 5,
+                            "type": "article",
+                            "category": "web",
+                            "title": "web article",
+                            "rlink": "https://web_article.com",
+                            "eta_in_hrs": 1,
+                            "counter": 3,
+                            "isPublic": 1
+                        }
+                    ]
+        }
+
+** http://localhost:3000/api/getSuggestions
+    body:
+        {
+            "interests": "('web', 'ai')"
+        }
+
+    fetched data:
+        {
+            "success": 1,
+            "data": [
+                        {
+                            "rid": 1,
+                            "type": "course",
+                            "category": "web",
+                            "title": "web course",
+                            "rlink": "https://www.coursera.org/specializations/web-design",
+                            "eta_in_hrs": 5,
+                            "counter": 1,
+                            "isPublic": 1
+                        },
+                        {
+                            "rid": 2,
+                            "type": "book",
+                            "category": "ai",
+                            "title": "artufical intelligence",
+                            "rlink": "https://www.google.com/search?rlz=1C1CHBF_enIN890IN890&sxsrf=ALeKk02ISwzyhMMA4DkXlyMvT3XY6Agd-Q:1607505349031&q=Artificial+Intelligence:+A+Modern+Approach&stick=H4sIAAAAAAAAAGVTO2wTQRD1BfLxOUixI6TIlXEVzMd3e3uxnSYJiCIiUVBIARScfOvb--39V7lPEwkhpUMRUmiRKICCgpoCoXQYiYICOgo6qlCmAWEHey8S1828N3PvzczOTNaLTacpgCD0CZjumjXV8-w-lyf73IWm3hRFvWcHtiFnfa40xETRcmw7GaMoEpY6gpqNKqVOFPTGmCFINt4VAtaJKoolyPY4VmM58bGUsl4tiIniuH2OH_ZydZ_K0RjEMAQRgsEITCkIgt0xU-5ZImBMMcwMGWW5jJRQqg5kzQzJKFakUR1Q0iCI-9zskAegBZ1IbzG1Ku5kmPosBiAJ9IyOapeUViu3irM0iexQH4FQaYFYZr7CTE8tMZ9DErrAjZ1x3EsClLQwM2BIbZK0ociaW1mrbVvhGaEBhMnIjwN0yJiO3IklwCbawwTJKnTGfmVgCW1GFmLi4Pw3ut5xiAiMM7LUJFIZjmTJdkQY5xsJiDC4hVx2i9hCQhlfdJ2enNs2oBJAIqL8sHYNS6dsT8i3cWoEVr43QRBxCvNz8SMUWkusnkgqCCGLMRksHsTZyKxiqHp-eziyiKoiPxfvJw4civ03U9WRoU3sH9zzidLcz5Pv89XDiadvPn7lnkzwcxueF2kk3dZIl2q9Ha9S56duudSkaWWBL1WnT9dgZ4uFapEfBxWTL93V6I636fVMnFYeVO7xxU3NUbUw2sKVZZ6_6RGiIWp6buUqf7FabiKWaA4fYzToN8__n66Xtk_fmkoVJC1PLHJ1Gyjvvjz7PHW_fCMpFPg7m6vVy40KP70ebXioS8q39698ePX4eKUxz8_sdBPP9Zy0XDj9fq3ULxX35z-tHIDjlfLLb3_23j68trpwrlZYLIhbJ7_3jg6vrzYKj96_Ppo6P8PNFWZfTDbWQmpiE5ldUlt3qUaIqWsu0pZra7WBWy10a2u-H3pdZBxMcX8B8Qo9VWoEAAA&sa=X&ved=2ahUKEwixw7aKyMDtAhVazTgGHcMBAekQ-BYwGHoECBEQNA&biw=1242&bih=597",
+                            "eta_in_hrs": 35,
+                            "counter": 3,
+                            "isPublic": 1
+                        },
+                        {
+                            "rid": 4,
+                            "type": "course",
+                            "category": "web",
+                            "title": "full-stack-foundations",
+                            "rlink": "https://www.udacity.com/course/full-stack-foundations--ud088",
+                            "eta_in_hrs": 12,
+                            "counter": 3,
+                            "isPublic": 1
+                        }
+                    ]
+        }
+
+** http://localhost:3000/api/updateSubmission
+    body:
+        {
+            "uid": 5,
+            "sequence": 1,
+            "completion_proof": "https://www.w3schools.com/sql/sql_dates.asp"
+        }
