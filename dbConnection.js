@@ -4,11 +4,11 @@ const mysql = require('promise-mysql');
 //const config = require('./config');
 
 const dbConfig = {
-  host: ENV['host'],
-  user: ENV['user'],
-  password: ENV['password'],
-  port: ENV['port'],
-  database: ENV['db'],
+  host: process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  port: process.env.port,
+  database: process.env.db,
   connectionLimit: 10,
 };
 
