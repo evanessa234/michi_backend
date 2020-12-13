@@ -16,7 +16,8 @@ module.exports = {
         await conn.query('START TRANSACTION');
        
         const result1 = await conn.query(`INSERT IGNORE INTO users (f_name, l_name, email) VALUES (?, ?, ?)`, [f_name, l_name, email]);
-        await conn.query('COMMIT'); // this step is only when we make any changes in database
+        await conn.query('COMMIT'); 
+        // this step is only when we make any changes in database
       const result2 = await conn.query(`SELECT * FROM users WHERE email = ?`, [email]);
       const result = {}
       result.result1 = result1;

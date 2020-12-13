@@ -63,13 +63,11 @@
 ** http://localhost:3000/api/postNewRoadmap
     body:
         {
-            {
                 "uid": 2,
                 "title": "roapmap new for 2",
                 "category": "('ml', 'cyb', 'web')",
                 "motivation": "motivation for roadmap 2",
                 "deadline": "2021-04-18 18:30:00"
-            }
         } 
 
 ** http://localhost:3000/api/updateRoadmap
