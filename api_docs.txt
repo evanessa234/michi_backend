@@ -1,3 +1,33 @@
+** result of auth :
+    fetched data:
+        {
+            "success":1,
+            "data": {
+                        "result1": {
+                                        "fieldCount":0,
+                                        "affectedRows":0,
+                                        "insertId":0,
+                                        "serverStatus":3,
+                                        "warningCount":2,
+                                        "message":"",
+                                        "protocol41":true,
+                                        "changedRows":0
+                                    },
+                        "result2": [
+                                        {
+                                            "uid":7,
+                                            "f_name":"Heena",
+                                            "l_name":"Singh",
+                                            "email":"heenareenasingh234@gmail.com",
+                                            "password":"",
+                                            "interests":null,
+                                            "profession":null
+                                        }
+                                    ]
+                    }
+        }
+
+
 ** http://localhost:3000/api/getProfile
 
     body :
@@ -33,13 +63,11 @@
 ** http://localhost:3000/api/postNewRoadmap
     body:
         {
-            {
                 "uid": 2,
                 "title": "roapmap new for 2",
                 "category": "('ml', 'cyb', 'web')",
                 "motivation": "motivation for roadmap 2",
                 "deadline": "2021-04-18 18:30:00"
-            }
         } 
 
 ** http://localhost:3000/api/updateRoadmap
