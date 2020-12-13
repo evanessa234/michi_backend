@@ -17,3 +17,49 @@ VALUES ((SELECT rmid FROM roadmap WHERE uid = 1), 1, 2, 2) ON DUPLICATE KEY UPDA
 
 INSERT INTO `roadmap_checkpoints` (`rmid`, `uid`, `rid`, `sequence`, `completion_date`, `completion_proof`, `share_linkedin`) VALUES ('1', '1', '1', '1', NULL, NULL, '0'), ('1', '1', '2', '2', NULL, NULL, '0'), ('1', '1', '3', '3', NULL, NULL, '0'), ('1', '1', '4', '4', NULL, NULL, '0');
 
+
+CREATE TABLE `users` (
+  `uid` int(11) NOT NULL,
+  `f_name` varchar(255) NOT NULL,
+  `l_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `interests` varchar(255) DEFAULT NULL,
+  `profession` varchar(255) DEFAULT NULL
+) 
+
+CREATE TABLE `resources` (
+  `rid` int(11) NOT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `category` varchar(155) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `rlink` text DEFAULT NULL,
+  `eta_in_hrs` int(11) DEFAULT NULL,
+  `counter` int(11) DEFAULT NULL,
+  `isPublic` tinyint(1) DEFAULT 1
+)
+
+CREATE TABLE `roadmap` (
+  `rmid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  `motivation` text DEFAULT NULL,
+  `endgoal` text DEFAULT NULL,
+  `start_date` datetime DEFAULT current_timestamp(),
+  `deadline` datetime DEFAULT NULL,
+  `completion_date` datetime DEFAULT NULL,
+  `achievement_proof` text DEFAULT NULL,
+  `isPublic` tinyint(1) DEFAULT 0
+)
+
+
+CREATE TABLE `roadmap_checkpoints` (
+  `rmid` int(11) NOT NULL,
+  `uid` int(11) DEFAULT NULL,
+  `rid` int(11) NOT NULL,
+  `sequence` int(11) NOT NULL,
+  `completion_date` datetime DEFAULT NULL,
+  `completion_proof` text DEFAULT NULL,
+  `share_linkedin` tinyint(1) DEFAULT 0
+)
