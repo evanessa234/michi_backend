@@ -8,8 +8,10 @@ const {
   getRoadmapCheckpoints,
   getSuggestions,
   getFeed,
-  updateSubmission
+  updateSubmission,
+  postRegisterNewUser
 } = require("../api/controller/controller.js");
+const { passAuth } = require("./controller/authenticate.js");
 
 router.get("/getProfile", getProfile);
 router.patch("/updatePassion", updatePassion);
@@ -21,5 +23,6 @@ router.get("/getSuggestions", getSuggestions);
 router.get("/getFeed", getFeed);
 router.patch("/updateSubmission", updateSubmission);
 
+// router.post('/auth/google/callback', passAuth, postRegisterNewUser);
 
 module.exports = router;
