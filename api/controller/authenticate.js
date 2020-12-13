@@ -5,7 +5,7 @@ const express = require('express');
 var passport = require('passport');
 var mysql = require('promise-mysql');
 
-const config = require('../../config.js');
+//const config = require('../../config.js');
 
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;

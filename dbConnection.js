@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-catch */
 const mysql = require('promise-mysql');
 
-const config = require('./config');
+//const config = require('./config');
 
 const dbConfig = {
   host: ENV['host'],
