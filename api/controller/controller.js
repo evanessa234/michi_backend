@@ -11,6 +11,7 @@ module.exports = {
       var f_name = req.user._json.given_name;
       var l_name = req.user._json.family_name;
       var email = req.user._json.email;
+
       
       try {
         await conn.query('START TRANSACTION');
@@ -35,9 +36,6 @@ module.exports = {
           await conn.release();
           await conn.destroy();
         }
-
-      //console.log(req.user.name);
-      //res.end('Logged in.');  
   },
   getProfile: async (req, res) => {
     const conn = await db();
