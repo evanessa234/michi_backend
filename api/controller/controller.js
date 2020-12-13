@@ -14,9 +14,14 @@ module.exports = {
 
       try {
         await conn.query('START TRANSACTION');
-        const result = await conn.query('INSERT INTO users (f_name, l_name, email) VALUES (?, ?, ?)', [f_name, l_name, email])
+       
+        const result1 = await conn.query(`INSERT IGNORE INTO users (f_name, l_name, email) VALUES (?, ?, ?)`, [f_name, l_name, email]);
         await conn.query('COMMIT'); // this step is only when we make any changes in database
-      res.type('json');
+      const result2 = await conn.query(`SELECT * FROM users WHERE email = ?`, [email]);
+      const result = {}
+      result.result1 = result1;
+      result.result2 = result2;
+        res.type('json');
         res.status(200).json({
           success: 1,
           data: result,
