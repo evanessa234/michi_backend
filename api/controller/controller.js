@@ -18,11 +18,15 @@ module.exports = {
         const result = await conn.query('INSERT INTO users (f_name, l_name, email)SELECT * FROM (SELECT ?, ?, ?) AS tmp WHERE NOT EXISTS (SELECT email FROM users WHERE email = ?) LIMIT 1', [f_name, l_name, email, email]);
 
         await conn.query('COMMIT'); // this step is only when we make any changes in database
+        const result2 = await conn.query(`SELECT * FROM users WHERE email = ?`, [email]);
+        const result = {}
+        result.result1 = result1;
+        result.result2 = result2;
         res.type('json');
-          res.status(200).json({
-            success: 1,
-            data: result,
-          });
+        res.status(200).json({
+          success: 1,
+          data: result,
+        });
         } catch (err) {
           res.status(500).json({
             error: err,
