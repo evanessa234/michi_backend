@@ -20,10 +20,7 @@ passport.deserializeUser(function(user, done) {
     done(null, user);
 });
 
-passport.use(new GoogleStrategy({
-    // clientID: '564930761826-a68k442gg70djn8cr6mh3p0lln9b82st.apps.googleusercontent.com',
-    // clientSecret: 'SNSJO8ngeIf4kTZ2lcWst7px',
-    // callbackURL: "http://localhost:3000/google/callback"    
+passport.use(new GoogleStrategy({   
     clientID: config.auth.GOOGLE_CLIENT_ID,
     clientSecret: config.auth.GOOGLE_CLIENT_SECRET,
     callbackURL: "http://localhost:3000/auth/google/callback"
