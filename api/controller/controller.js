@@ -263,5 +263,17 @@ module.exports = {
       await conn.release();
       await conn.destroy();
     }
-  }
+  },
+  isLoggedIn: (req, res, next) => {
+        if (req.user) {
+            next();
+        } else {
+            res.sendStatus(401);
+        }
+  },
+  // logout: (req, res) => {
+  //     req.session = null;
+  //     req.logout();
+  //     res.redirect('/');
+  // }
 }

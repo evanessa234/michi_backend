@@ -9,9 +9,12 @@ const {
   getSuggestions,
   getFeed,
   updateSubmission,
-  postRegisterNewUser
+  postRegisterNewUser,
+  isLoggedIn,
+  // logout
 } = require("../api/controller/controller.js");
-const { passAuth } = require("./controller/authenticate.js");
+// const { passAuth } = require("./controller/authenticate.js");
+// const isLoggedIn = require("./controller/authenticate");
 
 router.get("/getProfile", getProfile);
 router.patch("/updatePassion", updatePassion);
@@ -22,6 +25,7 @@ router.get("/getRoadmapCheckpoints", getRoadmapCheckpoints);
 router.get("/getSuggestions", getSuggestions);
 router.get("/getFeed", getFeed);
 router.patch("/updateSubmission", updateSubmission);
+// router.get("/logout", logout);
 
 // router.post('/auth/google/callback', passAuth, postRegisterNewUser);
 
